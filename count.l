@@ -1,3 +1,4 @@
+/* Prerequisite for this code is to have hello.txt file containing characters,words and lines in same directory */
 %{
 #include<stdio.h>
 int wcount=0,ccount=0,lcount=0;
@@ -18,6 +19,6 @@ yyin=fopen("hello.txt","r");
 yylex();
 printf("Character : %d",ccount);
 printf("\nwordcount: %d",wcount);
-printf("\nline: %d",lcount);
+printf("\nline: %d\n",lcount);
 return 0;
 }

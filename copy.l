@@ -2,14 +2,12 @@
 #include<stdio.h> 
 #include<string.h> 
 char line[100]; 
-
 %} 
 
 %% 
 ['\n'] { fprintf(yyout,"%s\n",line);} 
 (.*)	 { strcpy(line,yytext); } 
 %% 
-
 
 int yywrap() 
 { 
@@ -22,4 +20,3 @@ int main()
 	yyout=fopen("output.txt","w"); 
 	yylex(); 
 } 
-
